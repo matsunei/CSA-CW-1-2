@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.text.NumberFormat;
+
+public class Price
+{
+    public static void main (String[] args)
+    {
+        final double TAX_RATE = 0.06;
+        
+        int quantity;
+        double subtotal, tax, totalCost, unitPrice;
+        Scanner scan = new Scanner (System.in);
+         
+         System.out.print("Enter the quantity: ");
+         quantity = scan.nextInt();
+         
+         System.out.print("Enter the unit price: ");
+         unitPrice = scan.nextDouble();
+         
+         subtotal = quantity  * unitPrice;
+         tax = subtotal * TAX_RATE;
+         totalCost = subtotal + tax;
+         
+         NumberFormat money = NumberFormat.getCurrencyInstance();
+         NumberFormat percent = NumberFormat.getPercentInstance();
+         
+         System.out.println ("Subtotal: " + money.format(subtotal));
+         System.out.println ("Tax: " + money.format(tax) + " at " 
+                        + percent.format (TAX_RATE));
+
+         System.out.println ("Total: " + money.format(totalCost));
+         
+    } // end main method
+} // end class Price
