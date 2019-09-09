@@ -9,7 +9,7 @@ public class usePrintF
         int n = 461012;
         
         System.out.printf("%d%n", n);
-        System.out.printf("%08%n", n);
+        System.out.printf("%08d%n", n);
         System.out.printf("%+8d%n", n);
         System.out.printf("%,d%n", n);
         System.out.printf("%+,8d%n%n", n);
@@ -26,7 +26,7 @@ public class usePrintF
         
         Calendar c = Calendar.getInstance();
         System.out.printf("%tB %te, %tY%n", c, c, c);
-        System.out.printf("%t1:%tM %tp%n", c, c, c);
+        System.out.printf("%tl:%tM %tp%n", c, c, c);
         System.out.printf("%tD%n", c);
 
     } // end method main
